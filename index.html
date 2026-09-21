@@ -2,10 +2,13 @@
 <html lang="es">
 
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Para mi chinnita hermosa🌻</title>
+    <title>Para mi chinita hermosa 🌻</title>
+
 
     <style>
 
@@ -14,12 +17,17 @@
            ========================= */
 
         body {
+
             margin: 0;
+
             padding: 0;
+
             min-height: 100vh;
 
             display: flex;
+
             justify-content: center;
+
             align-items: center;
 
             font-family: Georgia, serif;
@@ -32,15 +40,18 @@
             );
 
             color: #5c4218;
+
         }
 
 
         /* =========================
-           TARJETA PRINCIPAL
+           PORTADA
            ========================= */
 
         .contenedor {
+
             width: 85%;
+
             max-width: 600px;
 
             padding: 45px 25px;
@@ -57,6 +68,7 @@
             backdrop-filter: blur(5px);
 
             animation: aparecer 1.5s ease;
+
         }
 
 
@@ -65,10 +77,13 @@
            ========================= */
 
         h1 {
+
             font-size: 42px;
+
             margin-bottom: 15px;
 
             color: #d69500;
+
         }
 
 
@@ -77,31 +92,37 @@
            ========================= */
 
         p {
+
             font-size: 20px;
+
             line-height: 1.6;
 
             margin-bottom: 30px;
+
         }
 
 
         /* =========================
-           GIRASOLES DECORATIVOS
+           GIRASOLES
            ========================= */
 
         .flores {
+
             font-size: 55px;
 
             margin-bottom: 15px;
 
             animation: flotar 3s ease-in-out infinite;
+
         }
 
 
         /* =========================
-           BOTÓN
+           BOTONES
            ========================= */
 
         button {
+
             border: none;
 
             padding: 15px 30px;
@@ -120,51 +141,850 @@
                 0 5px 15px rgba(0, 0, 0, 0.2);
 
             transition: 0.3s;
+
         }
 
 
         button:hover {
+
             transform: scale(1.08);
 
             background: #d99f00;
+
         }
 
 
         /* =========================
-           ANIMACIÓN DE ENTRADA
+           ANIMACIÓN PORTADA
            ========================= */
 
         @keyframes aparecer {
 
             from {
+
                 opacity: 0;
+
                 transform: translateY(30px);
+
             }
 
             to {
+
                 opacity: 1;
+
                 transform: translateY(0);
+
             }
 
         }
 
 
         /* =========================
-           ANIMACIÓN DE LOS GIRASOLES
+           ANIMACIÓN GIRASOLES
            ========================= */
 
         @keyframes flotar {
 
             0%, 100% {
+
                 transform: translateY(0);
+
             }
 
             50% {
+
                 transform: translateY(-10px);
+
             }
 
         }
 
+
+        /* =========================
+           CARTA
+           ========================= */
+
+        .carta {
+
+            display: none;
+
+            width: 85%;
+
+            max-width: 600px;
+
+            padding: 45px 30px;
+
+            text-align: center;
+
+            background: rgba(255, 255, 255, 0.88);
+
+            border-radius: 25px;
+
+            box-shadow:
+                0 10px 35px rgba(0, 0, 0, 0.18);
+
+            animation: aparecerCarta 1.2s ease;
+
+        }
+
+
+        /* =========================
+           TÍTULO DE LA CARTA
+           ========================= */
+
+        .carta h1 {
+
+            color: #d69500;
+
+            font-size: 36px;
+
+        }
+
+
+        /* =========================
+           TEXTO DE LA CARTA
+           ========================= */
+
+        .carta p {
+
+            font-size: 19px;
+
+            line-height: 1.8;
+
+            color: #5c4218;
+
+        }
+
+
+        /* =========================
+           SOBRE
+           ========================= */
+
+        .sobre {
+
+            font-size: 60px;
+
+            margin-bottom: 10px;
+
+        }
+
+
+        /* =========================
+           ANIMACIÓN DE LA CARTA
+           ========================= */
+
+        @keyframes aparecerCarta {
+
+            from {
+
+                opacity: 0;
+
+                transform: scale(0.8);
+
+            }
+
+            to {
+
+                opacity: 1;
+
+                transform: scale(1);
+
+            }
+
+        }
+          /* =====================================
+   JARDÍN DE GIRASOLES
+   ===================================== */
+
+.jardin {
+    display: none;
+    position: fixed;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background:
+        radial-gradient(circle at 50% 35%, rgba(255, 214, 100, 0.08), transparent 30%),
+        linear-gradient(
+            180deg,
+            #121126 0%,
+            #24204d 45%,
+            #58405e 100%
+        );
+
+    overflow: hidden;
+    text-align: center;
+
+    animation: aparecerJardin 1.8s ease forwards;
+}
+
+
+/* =====================================
+   ESTRELLAS
+   ===================================== */
+
+.estrellas {
+    position: absolute;
+    top: 35px;
+    left: 0;
+
+    width: 100%;
+
+    color: #fff5bd;
+    font-size: 24px;
+
+    opacity: 0;
+
+    animation:
+        aparecerEstrellas 1.5s ease 0.5s forwards,
+        brillar 3s ease-in-out 2s infinite alternate;
+}
+
+
+/* =====================================
+   MENSAJE SUPERIOR
+   ===================================== */
+
+.mensaje-jardin {
+    position: relative;
+
+    z-index: 20;
+
+    padding-top: 55px;
+
+    opacity: 0;
+
+    animation: aparecerTexto 1.5s ease 0.8s forwards;
+}
+
+
+.mensaje-jardin h1 {
+    margin-bottom: 10px;
+
+    color: #ffd95a;
+
+    font-size: 38px;
+
+    text-shadow:
+        0 0 10px rgba(255, 217, 90, 0.35);
+}
+
+
+.mensaje-jardin p {
+    max-width: 600px;
+
+    margin: auto;
+
+    padding: 0 25px;
+
+    color: #fff4d0;
+
+    font-size: 18px;
+
+    line-height: 1.6;
+}
+
+
+/* =====================================
+   ZONA DE LAS FLORES
+   ===================================== */
+
+.flores-jardin {
+    position: absolute;
+
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    height: 430px;
+}
+
+
+/* =====================================
+   GIRASOL
+   ===================================== */
+
+.girasol {
+    position: absolute;
+
+    bottom: 0;
+
+    width: 180px;
+    height: 390px;
+}
+
+
+/* IZQUIERDO */
+
+.girasol-izquierdo {
+    left: 17%;
+}
+
+
+/* DERECHO */
+
+.girasol-derecho {
+    right: 17%;
+}
+
+
+/* =====================================
+   TALLO
+   ===================================== */
+
+.tallo-css {
+    position: absolute;
+
+    bottom: 0;
+    left: 50%;
+
+    width: 9px;
+    height: 0;
+
+    transform: translateX(-50%);
+
+    background: linear-gradient(
+        to right,
+        #245c2a,
+        #4d963e,
+        #245c2a
+    );
+
+    border-radius: 10px;
+
+    transform-origin: bottom;
+
+    animation: crecerTallo 2s ease-out 0.4s forwards;
+}
+
+
+/* =====================================
+   FLOR
+   ===================================== */
+
+.flor-css {
+    position: absolute;
+
+    top: 10px;
+    left: 50%;
+
+    width: 145px;
+    height: 145px;
+
+    opacity: 0;
+
+    transform:
+        translateX(-50%)
+        scale(0);
+
+    transform-origin: center center;
+
+    animation:
+        aparecerFlor 1.4s ease-out 1.8s forwards,
+        moverFlor 4s ease-in-out 3.5s infinite alternate;
+}
+
+
+/* =====================================
+   PÉTALOS
+   ===================================== */
+
+.petalo {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    width: 42px;
+    height: 75px;
+
+    margin-left: -21px;
+    margin-top: -70px;
+
+    background:
+        linear-gradient(
+            to bottom,
+            #ffe45c,
+            #f5a900
+        );
+
+    border-radius:
+        50% 50%
+        45% 45%;
+
+    transform-origin: center bottom;
+
+    box-shadow:
+        0 2px 5px rgba(0, 0, 0, 0.18);
+}
+
+
+/* =====================================
+   POSICIÓN DE CADA PÉTALO
+   ===================================== */
+
+.petalo1 {
+    transform: rotate(0deg) translateY(-15px);
+}
+
+.petalo2 {
+    transform: rotate(45deg) translateY(-15px);
+}
+
+.petalo3 {
+    transform: rotate(90deg) translateY(-15px);
+}
+
+.petalo4 {
+    transform: rotate(135deg) translateY(-15px);
+}
+
+.petalo5 {
+    transform: rotate(180deg) translateY(-15px);
+}
+
+.petalo6 {
+    transform: rotate(225deg) translateY(-15px);
+}
+
+.petalo7 {
+    transform: rotate(270deg) translateY(-15px);
+}
+
+.petalo8 {
+    transform: rotate(315deg) translateY(-15px);
+}
+
+
+/* =====================================
+   CENTRO DEL GIRASOL
+   ===================================== */
+
+.centro-flor {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    width: 62px;
+    height: 62px;
+
+    transform: translate(-50%, -50%);
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle at 30% 30%,
+            #9a581d 2px,
+            transparent 3px
+        ),
+        radial-gradient(
+            circle at 70% 40%,
+            #512808 2px,
+            transparent 3px
+        ),
+        radial-gradient(
+            circle at 40% 70%,
+            #7a3c0c 2px,
+            transparent 3px
+        ),
+        radial-gradient(
+            circle at 70% 75%,
+            #9a581d 2px,
+            transparent 3px
+        ),
+        #70400f;
+
+    box-shadow:
+        inset 0 0 0 4px #4d290c,
+        0 3px 8px rgba(0, 0, 0, 0.3);
+
+    z-index: 10;
+}
+
+
+/* =====================================
+   HOJAS
+   ===================================== */
+
+.hoja-css {
+    position: absolute;
+
+    width: 70px;
+    height: 36px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #65ad4d,
+            #27652d
+        );
+
+    border-radius:
+        100% 0
+        100% 0;
+
+    opacity: 0;
+
+    animation:
+        aparecerHoja 1s ease-out 2.5s forwards;
+}
+
+
+/* HOJA IZQUIERDA */
+
+.hoja-izquierda {
+    left: 15px;
+    bottom: 110px;
+
+    transform: rotate(-25deg);
+}
+
+
+/* HOJA DERECHA */
+
+.hoja-derecha {
+    right: 10px;
+    bottom: 165px;
+
+    transform:
+        rotate(25deg)
+        scaleX(-1);
+}
+
+
+/* =====================================
+   ANIMACIONES
+   ===================================== */
+
+@keyframes aparecerJardin {
+
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+
+}
+
+
+@keyframes crecerTallo {
+
+    from {
+        height: 0;
+    }
+
+    to {
+        height: 270px;
+    }
+
+}
+
+
+@keyframes aparecerFlor {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateX(-50%)
+            scale(0);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateX(-50%)
+            scale(1);
+    }
+
+}
+
+
+@keyframes aparecerHoja {
+
+    from {
+        opacity: 0;
+
+        transform:
+            scale(0);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            scale(1);
+    }
+
+}
+
+
+@keyframes aparecerTexto {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+
+}
+
+
+@keyframes aparecerEstrellas {
+
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 0.8;
+    }
+
+}
+
+
+@keyframes brillar {
+
+    from {
+        opacity: 0.45;
+    }
+
+    to {
+        opacity: 1;
+    }
+
+}
+
+
+@keyframes moverFlor {
+
+    0% {
+        transform:
+            translateX(-50%)
+            rotate(-2deg);
+    }
+
+    50% {
+        transform:
+            translateX(-50%)
+            rotate(2deg);
+    }
+
+    100% {
+        transform:
+            translateX(-50%)
+            rotate(-2deg);
+    }
+
+}
+
+
+/* =====================================
+   MENSAJE FINAL
+   ===================================== */
+
+.mensaje-final {
+    position: absolute;
+
+    z-index: 20;
+
+    bottom: 25px;
+
+    width: 100%;
+
+    opacity: 0;
+
+    animation:
+        aparecerMensaje 1.8s ease 4.5s forwards;
+}
+
+
+.mensaje-final p {
+    margin: 0;
+
+    padding: 0 25px;
+
+    color: #fff4d0;
+
+    font-size: 19px;
+
+    font-style: italic;
+
+    line-height: 1.6;
+
+    text-shadow:
+        0 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+
+@keyframes aparecerMensaje {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+
+}
+
+
+/* =====================================
+   TELÉFONOS
+   ===================================== */
+
+@media (max-width: 600px) {
+
+    .mensaje-jardin {
+        padding-top: 35px;
+    }
+
+
+    .mensaje-jardin h1 {
+        font-size: 28px;
+    }
+
+
+    .mensaje-jardin p {
+        font-size: 15px;
+
+        padding: 0 20px;
+    }
+
+
+    .flores-jardin {
+        height: 360px;
+    }
+
+
+    .girasol {
+        width: 130px;
+        height: 320px;
+    }
+
+
+    .girasol-izquierdo {
+        left: 0;
+    }
+
+
+    .girasol-derecho {
+        right: 0;
+    }
+
+
+    .flor-css {
+        transform:
+            translateX(-50%)
+            scale(0.75);
+    }
+
+
+    .tallo-css {
+        height: 0;
+
+        animation:
+            crecerTalloMovil
+            2s ease-out
+            0.4s forwards;
+    }
+
+
+    .hoja-css {
+        width: 55px;
+        height: 28px;
+    }
+
+
+    .mensaje-final {
+        bottom: 15px;
+    }
+
+
+    .mensaje-final p {
+        font-size: 15px;
+    }
+
+}
+
+
+@keyframes crecerTalloMovil {
+
+    from {
+        height: 0;
+    }
+
+    to {
+        height: 210px;
+    }
+
+}       
+
+/* =====================================
+   MENSAJES ESPECIALES
+   ===================================== */
+
+.frase-distancia {
+    opacity: 0;
+
+    animation:
+        aparecerFrase 2s ease 6s forwards;
+}
+
+
+.feliz-21 {
+    opacity: 0;
+
+    font-size: 22px !important;
+
+    font-weight: bold;
+
+    color: #ffd95a !important;
+
+    text-shadow:
+        0 0 10px rgba(255, 217, 90, 0.35);
+
+    animation:
+        aparecerFrase 2s ease 8s forwards;
+}
+
+
+@keyframes aparecerFrase {
+
+    from {
+        opacity: 0;
+
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform: translateY(0);
+    }
+
+}
     </style>
 
 </head>
@@ -172,40 +992,237 @@
 
 <body>
 
-    <div class="contenedor">
+
+    <!-- =====================================
+         PORTADA
+         ===================================== -->
+
+    <div class="contenedor" id="portada">
 
         <div class="flores">
+
             🌻 🌻
+
         </div>
 
+
         <h1>
-            Para mi amor 💛
+
+            Para mi chinita hermosa 🌻💛
+
         </h1>
 
+
         <p>
-            Preparé algo pequeñito para ti...
-            <br>
-            pero está hecho con muchísimo amor.
+
+            Desde que llegaste a mi vida,
+            mis días tienen un poquito más de luz. 🌻
+
+            <br><br>
+
+            Tengo algo que quiero regalarte...
+
         </p>
 
+
         <button onclick="abrirCarta()">
+
             💌 Abrir mi carta
+
         </button>
 
     </div>
 
 
+
+    <!-- =====================================
+         CARTA
+         ===================================== -->
+
+    <div class="carta" id="carta">
+
+
+        <div class="sobre">
+
+            💌
+
+        </div>
+
+
+        <h1>
+
+            21 de septiembre 🌻
+
+        </h1>
+
+
+        <p>
+
+            Mi esposita hermosa..
+
+        </p>
+
+
+        <p>
+
+            Hoy quería hacer algo diferente para ti.
+            Algo pequeñito, pero hecho especialmente
+            pensando en ti.
+
+        </p>
+
+
+        <p>
+
+            Porque aunque estas flores sean virtuales,
+            todo el amor que hay detrás de ellas
+            es completamente real. 💛
+
+        </p>
+
+
+        <button onclick="mostrarSorpresa()">
+
+            🌻 Tengo algo más para ti
+
+        </button>
+
+
+    </div>
+        
+<!-- =====================================
+     JARDÍN DE GIRASOLES
+     ===================================== -->
+
+<div class="jardin" id="jardin">
+
+    <div class="estrellas">
+        ✨　　⭐　　✨　　⭐　　✨
+    </div>
+
+    <div class="mensaje-jardin">
+
+        <h1>
+            Para ti, mi chinita 🌻
+        </h1>
+
+        <p>
+            Si pudiera regalarte flores todos los días,
+            llenaría el mundo entero de girasoles para ti.
+        </p>
+
+    </div>
+
+
+    <div class="flores-jardin">
+
+        <div class="girasol girasol-izquierdo">
+
+    <div class="flor-css">
+        <span class="petalo petalo1"></span>
+        <span class="petalo petalo2"></span>
+        <span class="petalo petalo3"></span>
+        <span class="petalo petalo4"></span>
+        <span class="petalo petalo5"></span>
+        <span class="petalo petalo6"></span>
+        <span class="petalo petalo7"></span>
+        <span class="petalo petalo8"></span>
+
+        <div class="centro-flor"></div>
+    </div>
+
+    <div class="tallo-css"></div>
+
+    <div class="hoja-css hoja-izquierda"></div>
+    <div class="hoja-css hoja-derecha"></div>
+
+</div>
+
+
+<div class="girasol girasol-derecho">
+
+    <div class="flor-css">
+        <span class="petalo petalo1"></span>
+        <span class="petalo petalo2"></span>
+        <span class="petalo petalo3"></span>
+        <span class="petalo petalo4"></span>
+        <span class="petalo petalo5"></span>
+        <span class="petalo petalo6"></span>
+        <span class="petalo petalo7"></span>
+        <span class="petalo petalo8"></span>
+
+        <div class="centro-flor"></div>
+    </div>
+
+    <div class="tallo-css"></div>
+
+    <div class="hoja-css hoja-izquierda"></div>
+    <div class="hoja-css hoja-derecha"></div>
+
+</div>
+
+    </div>
+
+
+    <div class="mensaje-final">
+
+    <p>
+        Porque incluso a la distancia,
+        siempre encuentras la manera
+        de hacer florecer mi corazón. 💛
+    </p>
+
+    <p class="frase-distancia">
+        Quizá estas flores no puedan viajar hasta Honduras...
+        pero quería encontrar una forma de hacerlas llegar hasta ti. 🌻💛
+    </p>
+
+    <p class="feliz-21">
+        Feliz 21 de septiembre,
+        mi chinita hermosa. 💛
+    </p>
+
+</div>
+</div>
+
+    <!-- =====================================
+         JAVASCRIPT
+         ===================================== -->
+
     <script>
+
 
         function abrirCarta() {
 
-            alert(
-                "Esta es solamente la primera parte... 🌻💛"
-            );
+
+            // Ocultamos la portada
+
+            document.getElementById("portada").style.display = "none";
+
+
+            // Mostramos la carta
+
+            document.getElementById("carta").style.display = "block";
+
 
         }
 
+
+
+       function mostrarSorpresa() {
+
+    // Ocultamos la carta
+
+    document.getElementById("carta").style.display = "none";
+
+
+    // Mostramos el jardín
+
+    document.getElementById("jardin").style.display = "block";
+
+}
     </script>
+
 
 </body>
 
