@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Para mi chinnita hermosa🌻</title>
+
+    <style>
+
+        /* =========================
+           FONDO DE LA PÁGINA
+           ========================= */
+
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            font-family: Georgia, serif;
+
+            background: linear-gradient(
+                135deg,
+                #fff4c7,
+                #ffe3a3,
+                #ffd6a5
+            );
+
+            color: #5c4218;
+        }
+
+
+        /* =========================
+           TARJETA PRINCIPAL
+           ========================= */
+
+        .contenedor {
+            width: 85%;
+            max-width: 600px;
+
+            padding: 45px 25px;
+
+            text-align: center;
+
+            background: rgba(255, 255, 255, 0.75);
+
+            border-radius: 25px;
+
+            box-shadow:
+                0 10px 30px rgba(0, 0, 0, 0.15);
+
+            backdrop-filter: blur(5px);
+
+            animation: aparecer 1.5s ease;
+        }
+
+
+        /* =========================
+           TÍTULO
+           ========================= */
+
+        h1 {
+            font-size: 42px;
+            margin-bottom: 15px;
+
+            color: #d69500;
+        }
+
+
+        /* =========================
+           TEXTO
+           ========================= */
+
+        p {
+            font-size: 20px;
+            line-height: 1.6;
+
+            margin-bottom: 30px;
+        }
+
+
+        /* =========================
+           GIRASOLES DECORATIVOS
+           ========================= */
+
+        .flores {
+            font-size: 55px;
+
+            margin-bottom: 15px;
+
+            animation: flotar 3s ease-in-out infinite;
+        }
+
+
+        /* =========================
+           BOTÓN
+           ========================= */
+
+        button {
+            border: none;
+
+            padding: 15px 30px;
+
+            font-size: 18px;
+
+            border-radius: 30px;
+
+            cursor: pointer;
+
+            background: #f2b705;
+
+            color: white;
+
+            box-shadow:
+                0 5px 15px rgba(0, 0, 0, 0.2);
+
+            transition: 0.3s;
+        }
+
+
+        button:hover {
+            transform: scale(1.08);
+
+            background: #d99f00;
+        }
+
+
+        /* =========================
+           ANIMACIÓN DE ENTRADA
+           ========================= */
+
+        @keyframes aparecer {
+
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+        }
+
+
+        /* =========================
+           ANIMACIÓN DE LOS GIRASOLES
+           ========================= */
+
+        @keyframes flotar {
+
+            0%, 100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+    <div class="contenedor">
+
+        <div class="flores">
+            🌻 🌻
+        </div>
+
+        <h1>
+            Para mi amor 💛
+        </h1>
+
+        <p>
+            Preparé algo pequeñito para ti...
+            <br>
+            pero está hecho con muchísimo amor.
+        </p>
+
+        <button onclick="abrirCarta()">
+            💌 Abrir mi carta
+        </button>
+
+    </div>
+
+
+    <script>
+
+        function abrirCarta() {
+
+            alert(
+                "Esta es solamente la primera parte... 🌻💛"
+            );
+
+        }
+
+    </script>
+
+</body>
+
+</html>
